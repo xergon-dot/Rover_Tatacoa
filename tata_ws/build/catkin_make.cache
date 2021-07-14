@@ -1,0 +1,2 @@
+robot_setup_tf
+-DCATKIN_DEVEL_PREFIX=/home/xergon/Documentos/tata_ws/devel -DCMAKE_INSTALL_PREFIX=/home/xergon/Documentos/tata_ws/install -G Unix Makefiles

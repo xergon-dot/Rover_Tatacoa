@@ -1,0 +1,8 @@
+prefix=/home/xergon/Documentos/Rover/rover_ws/install
+
+Name: pruebasimple2
+Description: Description of pruebasimple2
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

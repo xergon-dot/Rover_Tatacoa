@@ -1,0 +1,16 @@
+#Ros_ignition
+
+# Shell A:
+. /opt/ros/melodic/setup.bash
+roscore
+
+# Shell B:
+ign gazebo -r building_robot.sdf
+
+# Shell C:
+#info de como conectar topicos https://github.com/IeiuniumLux/ros1_ign_bridge
+rosrun ros_ign_bridge parameter_bridge /cmd_vel@geometry_msgs/Twist@ignition.msgs.Twist
+
+# Shell D:
+. /opt/ros/melodic/setup.bash
+rosrun teleop_twist_keyboard  teleop_twist_keyboard.py

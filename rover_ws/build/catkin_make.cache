@@ -1,0 +1,2 @@
+camara_ros:gazebo_ros_demos/gazebo_tutorials:gazebo_ros_demos/rrbot_control:gazebo_ros_demos/rrbot_description:gazebo_ros_demos/rrbot_gazebo:moveo_ros/moveo_moveit:moveo_ros/moveo_moveit_config:moveo_ros/moveo_urdf:pruebasimple1:pruebasimple2
+-DCATKIN_DEVEL_PREFIX=/home/xergon/Documentos/Rover/rover_ws/devel -DCMAKE_INSTALL_PREFIX=/home/xergon/Documentos/Rover/rover_ws/install -G Unix Makefiles
