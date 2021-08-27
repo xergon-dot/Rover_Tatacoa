@@ -1,0 +1,17 @@
+<table>
+    <tr>
+        <th></th>
+        <th><button [disabled]="!rosConnected" mat-stroked-button type="button" class="btn btn-success" (click)="forward()">Adelante</button></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th><button [disabled]="!rosConnected" mat-stroked-button type="button" class="btn btn-success" (click)="left()">Izquierda</button></th>
+        <th></th>
+        <th><button [disabled]="!rosConnected" mat-stroked-button type="button" class="btn btn-success" (click)="right()">Derecha</button></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th><button [disabled]="!rosConnected" mat-stroked-button type="button" class="btn btn-success" (click)="reverse()">Reverse</button></th>
+        <th></th>
+    </tr>
+</table>

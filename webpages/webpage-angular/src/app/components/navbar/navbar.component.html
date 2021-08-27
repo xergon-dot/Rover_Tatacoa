@@ -1,0 +1,31 @@
+<mat-toolbar>
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button> -->
+    <mat-toolbar-row>
+        <span>Tatacoa URC</span>
+        <span class="example-spacer"></span>
+        <button [routerLink]="['/home']" mat-button aria-label="Example icon-button with heart icon">
+            Home
+        </button>
+        <button [routerLink]="['/cameras']" mat-button aria-label="Example icon-button with share icon">
+            Cámara
+        </button>
+        <button [routerLink]="['/sensors']" mat-button aria-label="Example icon-button with share icon">
+            Sensores
+        </button>
+        <button [routerLink]="['/map']" mat-button aria-label="Example icon-button with share icon">
+            Mapa
+        </button>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <span>Conexión a ROS 1</span>
+        <span class="example-spacer"></span>
+        <mat-icon *ngIf="rosStatus==0">mobiledata_off</mat-icon>
+        <mat-icon *ngIf="rosStatus==1">done</mat-icon>
+        <mat-icon *ngIf="rosStatus==2">warning</mat-icon>
+        <button mat-button (click)="onConnectROS1()" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            Conectar ROS 1
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>

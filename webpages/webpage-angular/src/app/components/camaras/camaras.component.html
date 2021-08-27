@@ -1,0 +1,20 @@
+<button mat-button [disabled]="rosStatus!=1" color="accent" (click)="onStartClick()">Start</button>
+<button mat-button color="primary" (click)="onStopClick()">Detener</button>
+
+<mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let camera of camerasList; index as i">
+        <div fxLayout="column">
+            <p>{{camera.name}}</p>
+            <p>{{camera.topic}}</p>
+            <img id="camera{{i}}" style='min-height: 200px; max-width: 100%; object-fit: contain'
+                src="./../../../assets/no-image.jpg">
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<!-- <ul>
+    <li *ngFor="let camera of camerasList; index as i">{{camera.name}} - topic: {{camera.topic}} -
+        <img id="camera{{i}}" style='min-height: 200px; max-width: 50%; object-fit: contain'
+            src="./../../../assets/no-image.jpg">
+    </li>
+</ul> -->

@@ -1,0 +1,7 @@
+<button mat-button [disabled]="rosStatus!=1" color="accent" (click)="onStartClick()">Start</button>
+<button mat-button color="primary" (click)="onStopClick()">Detener</button>
+<ul>
+    <li *ngFor="let sensor of sensorsList; index as i">{{sensor.name}} - topic: {{sensor.topic}} - <div id="s{{i}}">
+            S{{i}}</div>
+    </li>
+</ul>
