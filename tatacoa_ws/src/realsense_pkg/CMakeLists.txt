@@ -162,6 +162,8 @@ include_directories(
 catkin_install_python(PROGRAMS
   scripts/realsense_talker.py 
   scripts/realsense_rgb_publisher_node.py
+  scripts/realsense_rgb2_publisher_node.py
+  scripts/realsense_rgb3_publisher_node.py
   scripts/realsense_available_cameras_node.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

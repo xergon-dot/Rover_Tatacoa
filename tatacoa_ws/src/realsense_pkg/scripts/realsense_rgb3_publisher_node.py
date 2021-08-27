@@ -10,19 +10,19 @@ import time
 
 class realSenseRGBPublisherNode():
     def __init__(self):
-        self.cap = cv2.VideoCapture(3)
-        self.publisher = rospy.Publisher("camera_rgb", CompressedImage, queue_size=5)
-        self.timer = rospy.Timer(rospy.Duration.from_sec(0.000001), self.timer_callback)
+        self.cap = cv2.VideoCapture(0)
+        self.publisher = rospy.Publisher("camera_rgb3", CompressedImage, queue_size=5)
+        self.timer = rospy.Timer(rospy.Duration.from_sec(0.01), self.timer_callback)
         self.bridge = CvBridge()
 
     def timer_callback(self, event):
         test, frame = self.cap.read()
-        # print(frame.size)
+        print(frame.size)
         # rospy.loginfo(self.bridge.cv2_to_imgmsg(frame, "bgr8"))
         self.publisher.publish(self.bridge.cv2_to_compressed_imgmsg(frame, dst_format="jpg"))
 
 def main():
-    rospy.init_node('realsense_rgb_publisher_node', anonymous = True)
+    rospy.init_node('realsense_rgb3_publisher_node', anonymous = True)
     rgbPub = realSenseRGBPublisherNode()
     try:
         rospy.spin()
