@@ -1,0 +1,42 @@
+{
+    "sensors": [
+        {
+            "name": "Pose tortuga",
+            "topic": "/turtle1/pose",
+            "msgType": "turtlesim/Pose",
+            "enable": false
+        },
+        {
+            "name": "Comandos tortuga",
+            "topic": "/turtle1/cmd_vel",
+            "msgType": "geometry_msgs/Twist",
+            "enable": true
+        }
+    ],
+    "cameras": [
+        {
+            "name": "realsense",
+            "topic": "/camera_rgb",
+            "msgType": "sensor_msgs/CompressedImage",
+            "enable": true
+        },
+        {
+            "name": "camera2",
+            "topic": "/camera_rgb",
+            "msgType": "sensor_msgs/CompressedImage",
+            "enable": true
+        },
+        {
+            "name": "camera3",
+            "topic": "/camera_rgb",
+            "msgType": "sensor_msgs/CompressedImage",
+            "enable": true
+        },
+        {
+            "name": "camera4",
+            "topic": "/camera_rgb",
+            "msgType": "sensor_msgs/CompressedImage",
+            "enable": true
+        }
+    ]
+}
